@@ -27,7 +27,7 @@ module Users
           history_id:
         }
       ).call do |result|
-        user.add_message!(result)
+        user.add_message(result)
       end
     end
   end

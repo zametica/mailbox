@@ -14,7 +14,7 @@ class User < ApplicationRecord
     user
   end
 
-  def add_message!(message)
-    Message.create_from_gmail!(message, user: self)
+  def add_message(message)
+    Message.create_from_gmail(message, user_id: id)
   end
 end

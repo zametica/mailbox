@@ -8,7 +8,7 @@ module MessageParser
       sender: header(message, 'From'),
       recipient: header(message, 'Delivered-To'),
       body: body(message),
-      sent_at: Time.at(message.internal_date).to_datetime
+      sent_at: Time.at(message.internal_date / 1000)
     }
   end
 

@@ -3,7 +3,7 @@ class CreateMessages < ActiveRecord::Migration[7.0]
     create_table :messages do |t|
       t.references :user
 
-      t.string :message_id
+      t.string :message_id, null: false, index: { unique: true }
       t.string :subject
       t.string :sender
       t.string :recipient

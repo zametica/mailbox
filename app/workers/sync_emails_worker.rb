@@ -3,5 +3,7 @@ class SyncEmailsWorker
 
   def perform(user_id)
     Users::ImportEmailsService.call(user_id:)
+  rescue UnrecoverableError
+    # skip retry
   end
 end
