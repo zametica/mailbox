@@ -15,22 +15,6 @@ class User < ApplicationRecord
   end
 
   def add_message!(message)
-    Message.create!(
-      user: self,
-      message_id: message.id,
-      history_id: message.history_id,
-      thread_id: message.thread_id,
-      subject: message_header(message, 'Subject'),
-      sender: message_header(message, 'From'),
-      recipient: message_header(message, 'Delivered-To'),
-      body: message.payload.parts.map(&:body).map(&:data).join(''),
-      sent_at: Time.at(message.internal_date).to_datetime
-    )
-  end
-
-  private
-
-  def message_header(message, name)
-    message.payload.headers.find { |h| h.name == name }&.value
+    Message.create_from_gmail!(message, user: self)
   end
 end
