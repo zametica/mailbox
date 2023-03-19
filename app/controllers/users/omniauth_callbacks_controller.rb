@@ -1,10 +1,11 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
-    user = User.find_by_auth(auth)
+    @user = User.find_by_auth(auth)
 
-    if user.present?
+    if @user.present?
+      sync_emails
       sign_out_all_scopes
-      sign_in_and_redirect user, event: :authentication
+      sign_in_and_redirect @user, event: :authentication
     else
       redirect_to new_user_session_path
     end
@@ -21,6 +22,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def sync_emails
+    SyncEmailsWorker.perform_async(@user.id)
+  end
 
   def auth
     @auth ||= request.env['omniauth.auth']

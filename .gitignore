@@ -32,3 +32,6 @@
 
 # Ignore env
 .env*
+
+# Ignore debug
+.byebug*
