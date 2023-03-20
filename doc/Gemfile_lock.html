@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Gemfile.lock - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="./Gemfile.html">Gemfile</a>
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+    <li><a href="./README_md.html">README</a>
+    <li><a href="./Rakefile.html">Rakefile</a>
+    <li><details><summary>app</summary>
+    <ul class="link-list">
+      <li><a href="./app/assets/config/manifest_js.html">manifest.js</a>
+      <li><a href="./app/assets/stylesheets/application_scss.html">application.scss</a>
+      <li><a href="./app/javascript/application_js.html">application.js</a>
+      <li><a href="./app/javascript/controllers/application_js.html">application.js</a>
+      <li><a href="./app/javascript/controllers/hello_controller_js.html">hello_controller.js</a>
+      <li><a href="./app/javascript/controllers/index_js.html">index.js</a>
+      <li><a href="./app/javascript/controllers/mailbox_controller_js.html">mailbox_controller.js</a>
+    </ul></details>
+    <li><a href="./config_ru.html">config.ru</a>
+    <li><details><summary>config</summary>
+    <ul class="link-list">
+      <li><a href="./config/credentials_yml_enc.html">credentials.yml.enc</a>
+      <li><a href="./config/master_key.html">master.key</a>
+    </ul></details>
+    <li><details><summary>public</summary>
+    <ul class="link-list">
+      <li><a href="./public/404_html.html">404.html</a>
+      <li><a href="./public/422_html.html">422.html</a>
+      <li><a href="./public/500_html.html">500.html</a>
+      <li><a href="./public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+      <li><a href="./public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+      <li><a href="./public/favicon_ico.html">favicon.ico</a>
+      <li><a href="./public/robots_txt.html">robots</a>
+    </ul></details>
+    <li><details><summary>tmp</summary>
+    <ul class="link-list">
+      <li><a href="./tmp/development_secret_txt.html">development_secret</a>
+      <li><a href="./tmp/restart_txt.html">restart</a>
+    </ul></details>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page Gemfile.lock">
+
+<p>GEM</p>
+
+<pre>remote: https://rubygems.org/
+specs:
+  actioncable (7.0.4.3)
+    actionpack (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+    nio4r (~&gt; 2.0)
+    websocket-driver (&gt;= 0.6.1)
+  actionmailbox (7.0.4.3)
+    actionpack (= 7.0.4.3)
+    activejob (= 7.0.4.3)
+    activerecord (= 7.0.4.3)
+    activestorage (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+    mail (&gt;= 2.7.1)
+    net-imap
+    net-pop
+    net-smtp
+  actionmailer (7.0.4.3)
+    actionpack (= 7.0.4.3)
+    actionview (= 7.0.4.3)
+    activejob (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+    mail (~&gt; 2.5, &gt;= 2.5.4)
+    net-imap
+    net-pop
+    net-smtp
+    rails-dom-testing (~&gt; 2.0)
+  actionpack (7.0.4.3)
+    actionview (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+    rack (~&gt; 2.0, &gt;= 2.2.0)
+    rack-test (&gt;= 0.6.3)
+    rails-dom-testing (~&gt; 2.0)
+    rails-html-sanitizer (~&gt; 1.0, &gt;= 1.2.0)
+  actiontext (7.0.4.3)
+    actionpack (= 7.0.4.3)
+    activerecord (= 7.0.4.3)
+    activestorage (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+    globalid (&gt;= 0.6.0)
+    nokogiri (&gt;= 1.8.5)
+  actionview (7.0.4.3)
+    activesupport (= 7.0.4.3)
+    builder (~&gt; 3.1)
+    erubi (~&gt; 1.4)
+    rails-dom-testing (~&gt; 2.0)
+    rails-html-sanitizer (~&gt; 1.1, &gt;= 1.2.0)
+  activejob (7.0.4.3)
+    activesupport (= 7.0.4.3)
+    globalid (&gt;= 0.3.6)
+  activemodel (7.0.4.3)
+    activesupport (= 7.0.4.3)
+  activerecord (7.0.4.3)
+    activemodel (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+  activestorage (7.0.4.3)
+    actionpack (= 7.0.4.3)
+    activejob (= 7.0.4.3)
+    activerecord (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+    marcel (~&gt; 1.0)
+    mini_mime (&gt;= 1.1.0)
+  activesupport (7.0.4.3)
+    concurrent-ruby (~&gt; 1.0, &gt;= 1.0.2)
+    i18n (&gt;= 1.6, &lt; 2)
+    minitest (&gt;= 5.1)
+    tzinfo (~&gt; 2.0)
+  addressable (2.8.1)
+    public_suffix (&gt;= 2.0.2, &lt; 6.0)
+  autoprefixer-rails (10.4.13.0)
+    execjs (~&gt; 2)
+  bcrypt (3.1.18)
+  bindex (0.8.1)
+  bootsnap (1.16.0)
+    msgpack (~&gt; 1.2)
+  bootstrap (5.1.3)
+    autoprefixer-rails (&gt;= 9.1.0)
+    popper_js (&gt;= 2.9.3, &lt; 3)
+    sassc-rails (&gt;= 2.0.0)
+  builder (3.2.4)
+  byebug (11.1.3)
+  concurrent-ruby (1.2.2)
+  connection_pool (2.3.0)
+  crass (1.0.6)
+  date (3.3.3)
+  debug (1.7.1)
+    irb (&gt;= 1.5.0)
+    reline (&gt;= 0.3.1)
+  declarative (0.0.20)
+  devise (4.9.0)
+    bcrypt (~&gt; 3.0)
+    orm_adapter (~&gt; 0.1)
+    railties (&gt;= 4.1.0)
+    responders
+    warden (~&gt; 1.2.3)
+  diff-lcs (1.5.0)
+  dotenv (2.8.1)
+  dotenv-rails (2.8.1)
+    dotenv (= 2.8.1)
+    railties (&gt;= 3.2)
+  erubi (1.12.0)
+  execjs (2.8.1)
+  factory_bot (6.2.1)
+    activesupport (&gt;= 5.0.0)
+  factory_bot_rails (6.2.0)
+    factory_bot (~&gt; 6.2.0)
+    railties (&gt;= 5.0.0)
+  faraday (2.7.4)
+    faraday-net_http (&gt;= 2.0, &lt; 3.1)
+    ruby2_keywords (&gt;= 0.0.4)
+  faraday-net_http (3.0.2)
+  ffi (1.15.5)
+  globalid (1.1.0)
+    activesupport (&gt;= 5.0)
+  google-apis-core (0.11.0)
+    addressable (~&gt; 2.5, &gt;= 2.5.1)
+    googleauth (&gt;= 0.16.2, &lt; 2.a)
+    httpclient (&gt;= 2.8.1, &lt; 3.a)
+    mini_mime (~&gt; 1.0)
+    representable (~&gt; 3.0)
+    retriable (&gt;= 2.0, &lt; 4.a)
+    rexml
+    webrick
+  google-apis-gmail_v1 (0.25.0)
+    google-apis-core (&gt;= 0.11.0, &lt; 2.a)
+  googleauth (1.3.0)
+    faraday (&gt;= 0.17.3, &lt; 3.a)
+    jwt (&gt;= 1.4, &lt; 3.0)
+    memoist (~&gt; 0.16)
+    multi_json (~&gt; 1.11)
+    os (&gt;= 0.9, &lt; 2.0)
+    signet (&gt;= 0.16, &lt; 2.a)
+  hashie (5.0.0)
+  httpclient (2.8.3)
+  i18n (1.12.0)
+    concurrent-ruby (~&gt; 1.0)
+  importmap-rails (1.1.5)
+    actionpack (&gt;= 6.0.0)
+    railties (&gt;= 6.0.0)
+  io-console (0.6.0)
+  irb (1.6.3)
+    reline (&gt;= 0.3.0)
+  jbuilder (2.11.5)
+    actionview (&gt;= 5.0.0)
+    activesupport (&gt;= 5.0.0)
+  jwt (2.7.0)
+  kaminari (1.2.2)
+    activesupport (&gt;= 4.1.0)
+    kaminari-actionview (= 1.2.2)
+    kaminari-activerecord (= 1.2.2)
+    kaminari-core (= 1.2.2)
+  kaminari-actionview (1.2.2)
+    actionview
+    kaminari-core (= 1.2.2)
+  kaminari-activerecord (1.2.2)
+    activerecord
+    kaminari-core (= 1.2.2)
+  kaminari-core (1.2.2)
+  loofah (2.19.1)
+    crass (~&gt; 1.0.2)
+    nokogiri (&gt;= 1.5.9)
+  mail (2.8.1)
+    mini_mime (&gt;= 0.1.1)
+    net-imap
+    net-pop
+    net-smtp
+  marcel (1.0.2)
+  memoist (0.16.2)
+  method_source (1.0.0)
+  mini_mime (1.1.2)
+  minitest (5.18.0)
+  msgpack (1.6.1)
+  multi_json (1.15.0)
+  multi_xml (0.6.0)
+  net-imap (0.3.4)
+    date
+    net-protocol
+  net-pop (0.1.2)
+    net-protocol
+  net-protocol (0.2.1)
+    timeout
+  net-smtp (0.3.3)
+    net-protocol
+  nio4r (2.5.8)
+  nokogiri (1.14.2-arm64-darwin)
+    racc (~&gt; 1.4)
+  oauth2 (2.0.9)
+    faraday (&gt;= 0.17.3, &lt; 3.0)
+    jwt (&gt;= 1.0, &lt; 3.0)
+    multi_xml (~&gt; 0.5)
+    rack (&gt;= 1.2, &lt; 4)
+    snaky_hash (~&gt; 2.0)
+    version_gem (~&gt; 1.1)
+  omniauth (2.1.1)
+    hashie (&gt;= 3.4.6)
+    rack (&gt;= 2.2.3)
+    rack-protection
+  omniauth-google-oauth2 (1.1.1)
+    jwt (&gt;= 2.0)
+    oauth2 (~&gt; 2.0.6)
+    omniauth (~&gt; 2.0)
+    omniauth-oauth2 (~&gt; 1.8.0)
+  omniauth-oauth2 (1.8.0)
+    oauth2 (&gt;= 1.4, &lt; 3)
+    omniauth (~&gt; 2.0)
+  omniauth-rails_csrf_protection (1.0.1)
+    actionpack (&gt;= 4.2)
+    omniauth (~&gt; 2.0)
+  orm_adapter (0.5.0)
+  os (1.1.4)
+  pg (1.4.6)
+  popper_js (2.11.6)
+  psych (5.1.0)
+    stringio
+  public_suffix (5.0.1)
+  puma (5.6.5)
+    nio4r (~&gt; 2.0)
+  racc (1.6.2)
+  rack (2.2.6.4)
+  rack-protection (3.0.5)
+    rack
+  rack-test (2.1.0)
+    rack (&gt;= 1.3)
+  rails (7.0.4.3)
+    actioncable (= 7.0.4.3)
+    actionmailbox (= 7.0.4.3)
+    actionmailer (= 7.0.4.3)
+    actionpack (= 7.0.4.3)
+    actiontext (= 7.0.4.3)
+    actionview (= 7.0.4.3)
+    activejob (= 7.0.4.3)
+    activemodel (= 7.0.4.3)
+    activerecord (= 7.0.4.3)
+    activestorage (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+    bundler (&gt;= 1.15.0)
+    railties (= 7.0.4.3)
+  rails-dom-testing (2.0.3)
+    activesupport (&gt;= 4.2.0)
+    nokogiri (&gt;= 1.6)
+  rails-html-sanitizer (1.5.0)
+    loofah (~&gt; 2.19, &gt;= 2.19.1)
+  railties (7.0.4.3)
+    actionpack (= 7.0.4.3)
+    activesupport (= 7.0.4.3)
+    method_source
+    rake (&gt;= 12.2)
+    thor (~&gt; 1.0)
+    zeitwerk (~&gt; 2.5)
+  rake (13.0.6)
+  rdoc (6.5.0)
+    psych (&gt;= 4.0.0)
+  redis (4.8.1)
+  reline (0.3.2)
+    io-console (~&gt; 0.5)
+  representable (3.2.0)
+    declarative (&lt; 0.1.0)
+    trailblazer-option (&gt;= 0.1.1, &lt; 0.2.0)
+    uber (&lt; 0.2.0)
+  responders (3.1.0)
+    actionpack (&gt;= 5.2)
+    railties (&gt;= 5.2)
+  retriable (3.1.2)
+  rexml (3.2.5)
+  rspec-core (3.12.1)
+    rspec-support (~&gt; 3.12.0)
+  rspec-expectations (3.12.2)
+    diff-lcs (&gt;= 1.2.0, &lt; 2.0)
+    rspec-support (~&gt; 3.12.0)
+  rspec-mocks (3.12.4)
+    diff-lcs (&gt;= 1.2.0, &lt; 2.0)
+    rspec-support (~&gt; 3.12.0)
+  rspec-rails (6.0.1)
+    actionpack (&gt;= 6.1)
+    activesupport (&gt;= 6.1)
+    railties (&gt;= 6.1)
+    rspec-core (~&gt; 3.11)
+    rspec-expectations (~&gt; 3.11)
+    rspec-mocks (~&gt; 3.11)
+    rspec-support (~&gt; 3.11)
+  rspec-support (3.12.0)
+  ruby2_keywords (0.0.5)
+  sassc (2.4.0)
+    ffi (~&gt; 1.9)
+  sassc-rails (2.1.2)
+    railties (&gt;= 4.0.0)
+    sassc (&gt;= 2.0)
+    sprockets (&gt; 3.0)
+    sprockets-rails
+    tilt
+  sidekiq (6.5.8)
+    connection_pool (&gt;= 2.2.5, &lt; 3)
+    rack (~&gt; 2.0)
+    redis (&gt;= 4.5.0, &lt; 5)
+  signet (0.17.0)
+    addressable (~&gt; 2.8)
+    faraday (&gt;= 0.17.5, &lt; 3.a)
+    jwt (&gt;= 1.5, &lt; 3.0)
+    multi_json (~&gt; 1.10)
+  snaky_hash (2.0.1)
+    hashie
+    version_gem (~&gt; 1.1, &gt;= 1.1.1)
+  sprockets (4.2.0)
+    concurrent-ruby (~&gt; 1.0)
+    rack (&gt;= 2.2.4, &lt; 4)
+  sprockets-rails (3.4.2)
+    actionpack (&gt;= 5.2)
+    activesupport (&gt;= 5.2)
+    sprockets (&gt;= 3.0.0)
+  stimulus-rails (1.2.1)
+    railties (&gt;= 6.0.0)
+  stringio (3.0.5)
+  thor (1.2.1)
+  tilt (2.1.0)
+  timeout (0.3.2)
+  trailblazer-option (0.1.2)
+  turbo-rails (1.4.0)
+    actionpack (&gt;= 6.0.0)
+    activejob (&gt;= 6.0.0)
+    railties (&gt;= 6.0.0)
+  tzinfo (2.0.6)
+    concurrent-ruby (~&gt; 1.0)
+  uber (0.1.0)
+  version_gem (1.1.2)
+  warden (1.2.9)
+    rack (&gt;= 2.0.9)
+  web-console (4.2.0)
+    actionview (&gt;= 6.0.0)
+    activemodel (&gt;= 6.0.0)
+    bindex (&gt;= 0.4.0)
+    railties (&gt;= 6.0.0)
+  webrick (1.8.1)
+  websocket-driver (0.7.5)
+    websocket-extensions (&gt;= 0.1.0)
+  websocket-extensions (0.1.5)
+  zeitwerk (2.6.7)</pre>
+
+<p>PLATFORMS</p>
+
+<pre class="ruby"><span class="ruby-identifier">arm64</span><span class="ruby-operator">-</span><span class="ruby-identifier">darwin</span><span class="ruby-value">-21</span>
+</pre>
+
+<p>DEPENDENCIES</p>
+
+<pre>bootsnap
+bootstrap (~&gt; 5.1.3)
+byebug
+debug
+devise
+dotenv-rails
+factory_bot_rails
+google-apis-gmail_v1
+importmap-rails
+jbuilder
+kaminari
+omniauth-google-oauth2
+omniauth-rails_csrf_protection
+pg (~&gt; 1.1)
+puma (~&gt; 5.0)
+rails (~&gt; 7.0.4, &gt;= 7.0.4.3)
+rdoc
+rspec-rails
+sidekiq
+sprockets-rails
+stimulus-rails
+turbo-rails
+tzinfo-data
+web-console</pre>
+
+<p>RUBY VERSION</p>
+
+<pre>ruby 3.1.2p20</pre>
+
+<p>BUNDLED WITH</p>
+
+<pre>2.3.19</pre>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

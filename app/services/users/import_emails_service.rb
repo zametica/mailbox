@@ -34,8 +34,8 @@ module Users
       return partial_import if last_history_id.present?
 
       full_import
-    rescue Google::Apis::Error, Signet::AuthorizationError
-      raise UnrecoverableError, 'Request failed'
+    rescue Signet::AuthorizationError
+      raise UnrecoverableError, 'Authorization failed'
     end
 
     def reschedule_worker

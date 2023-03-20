@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+
+
+  <ul class="link-list" role="directory">
+              <li>
+            <details open>
+              <summary>      <a href="#label-Mailbox">Mailbox</a>
+</summary>
+              <ul class="link-list" role="directory">
+                          <li>      <a href="#label-Setup">Setup</a>
+          <li>      <a href="#label-ENV">ENV</a>
+
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details open>
+              <summary>      <a href="#label-Docs">Docs</a>
+</summary>
+              <ul class="link-list" role="directory">
+                          <li>      <a href="#label-Description">Description</a>
+          <li>      <a href="#label-Worker+-+Import+emails">Worker - Import emails</a>
+          <li>      <a href="#label-Error+handling">Error handling</a>
+          <li>      <a href="#label-Routes">Routes</a>
+          <li>      <a href="#label-Classes">Classes</a>
+
+              </ul>
+            </details>
+          </li>
+
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="./Gemfile.html">Gemfile</a>
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+    <li><a href="./README_md.html">README</a>
+    <li><a href="./Rakefile.html">Rakefile</a>
+    <li><details><summary>app</summary>
+    <ul class="link-list">
+      <li><a href="./app/assets/config/manifest_js.html">manifest.js</a>
+      <li><a href="./app/assets/stylesheets/application_scss.html">application.scss</a>
+      <li><a href="./app/javascript/application_js.html">application.js</a>
+      <li><a href="./app/javascript/controllers/application_js.html">application.js</a>
+      <li><a href="./app/javascript/controllers/hello_controller_js.html">hello_controller.js</a>
+      <li><a href="./app/javascript/controllers/index_js.html">index.js</a>
+      <li><a href="./app/javascript/controllers/mailbox_controller_js.html">mailbox_controller.js</a>
+    </ul></details>
+    <li><a href="./config_ru.html">config.ru</a>
+    <li><details><summary>config</summary>
+    <ul class="link-list">
+      <li><a href="./config/credentials_yml_enc.html">credentials.yml.enc</a>
+      <li><a href="./config/master_key.html">master.key</a>
+    </ul></details>
+    <li><details><summary>public</summary>
+    <ul class="link-list">
+      <li><a href="./public/404_html.html">404.html</a>
+      <li><a href="./public/422_html.html">422.html</a>
+      <li><a href="./public/500_html.html">500.html</a>
+      <li><a href="./public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+      <li><a href="./public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+      <li><a href="./public/favicon_ico.html">favicon.ico</a>
+      <li><a href="./public/robots_txt.html">robots</a>
+    </ul></details>
+    <li><details><summary>tmp</summary>
+    <ul class="link-list">
+      <li><a href="./tmp/development_secret_txt.html">development_secret</a>
+      <li><a href="./tmp/restart_txt.html">restart</a>
+    </ul></details>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.md">
+
+<h1 id="label-Mailbox"><a href="Mailbox.html"><code>Mailbox</code></a><span><a href="#label-Mailbox">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<h2 id="label-Setup">Setup<span><a href="#label-Setup">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre class="ruby"><span class="ruby-identifier">bundle</span> <span class="ruby-identifier">exec</span> <span class="ruby-identifier">rails</span> <span class="ruby-value">db:</span><span class="ruby-identifier">setup</span>
+<span class="ruby-identifier">bundle</span> <span class="ruby-identifier">exec</span> <span class="ruby-identifier">rails</span> <span class="ruby-identifier">s</span>
+<span class="ruby-identifier">bundle</span> <span class="ruby-identifier">exec</span> <span class="ruby-identifier">sidekiq</span>
+</pre>
+
+<h2 id="label-ENV">ENV<span><a href="#label-ENV">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>GMAIL_CLIENT_ID=
+GMAIL_CLIENT_SECRET=</pre>
+
+<h1 id="label-Docs">Docs<span><a href="#label-Docs">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<h2 id="label-Description">Description<span><a href="#label-Description">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>The initial idea is to first enable user to login with google oauth2. Since the code authorization with user consent is required <code>devise</code> gem is used in combination with <code>omniauth</code> just for the sake of simplicity so we’re able to test the client side as well, otherwise we would authenticate on the client side and hand over a jwt to keep our web service stateless.</p>
+
+<p>After successful authentication a sidekiq job is scheduled asynchronously to perform a mailbox sync.</p>
+
+<h2 id="label-Worker+-+Import+emails">Worker - Import emails<span><a href="#label-Worker+-+Import+emails">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>In order to sync emails for a user we need to fetch them from gmail api. There are two types of the sync. * Full sync - used for the first-time login  - this means when user authenticates with our service for the very first time we need to call <code>messages.list</code> multiple times using pagination in batches in order to fetch old messages  - to determine whether it’s a full sync we simply check if there are any messages persisted for a particular user in the db * Partial sync  - to fetch the messages starting from a particular date or state we need to call <code>history.list</code> endpoint providing it with the last history id persisted in the db  - this is not the best solution since history records are typically available for a short time period, so in our case it could potentially be very slow to sync the mailbox  - the better solution would be using <a href="https://developers.google.com/gmail/api/guides/push">push notifications</a> since we would get the messages almost instantly and there are also two options - push and pull type of notification</p>
+
+<p>After each import is done, regardless of the type, a worker is rescheduled to keep the mailbox in sync. The access token is used to check whether a user has an active session so sync could be cancelled eventually, but again in the world of stateless web services this would be a bad solution thus we would need to implement some kind of tracking a user activity on the mailbox page in case we want to go with history approach rather than push notifications.</p>
+
+<h2 id="label-Error+handling">Error handling<span><a href="#label-Error+handling">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>There are two types of errors we need to handle - internal and external (3rd party). <code>UnrecoverableError</code> is introduced to break the mail sync if anything goes wrong causing our sync not being retryable e.g. if user is missing in the db or in case authorization fails on gmail calls. All other errors are supposed to retry a job.</p>
+
+<h2 id="label-Routes">Routes<span><a href="#label-Routes">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>API</p>
+</li><li>
+<p><code>/api/mails</code> - web service endpoint for performing a search on mailbox</p>
+</li><li>
+<p>Client</p>
+</li><li>
+<p><code>/mails</code> - used for testing the search</p>
+</li><li>
+<p><code>/sign_in</code>, <code>sign_out</code> - used for session handling</p>
+</li><li>
+<p><code>/users/auth/google_oauth2/callback</code> - handling the successful authorization</p>
+</li></ul>
+
+<h2 id="label-Classes">Classes<span><a href="#label-Classes">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
