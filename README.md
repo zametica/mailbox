@@ -44,3 +44,7 @@ There are two types of errors we need to handle - internal and external (3rd par
 
 ## Classes
 For Classes documentation please refer to [doc](./doc/).
+
+## Improvements
+Some improvements are done to make the service stateless. 
+Please check https://github.com/zametica/mailbox/tree/improvements.
