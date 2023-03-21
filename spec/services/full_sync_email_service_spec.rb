@@ -11,7 +11,7 @@ RSpec.describe Users::FullSyncEmailService, type: :service do
     end
 
     it 'creates a message' do
-      expect { described_class.call(user:) }.to(
+      expect { described_class.call(user:, access_token: '') }.to(
         change { user.messages.count }.by(1)
       )
     end
