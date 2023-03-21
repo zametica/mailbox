@@ -17,4 +17,8 @@ class User < ApplicationRecord
   def add_message(message)
     Message.create_from_gmail(message, user_id: id)
   end
+
+  def last_history_id
+    @last_history_id ||= messages.order(history_id: :desc).pick(:history_id)
+  end
 end

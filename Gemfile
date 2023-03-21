@@ -48,6 +48,7 @@ gem 'bootsnap', require: false
 gem 'bootstrap', '~> 5.1.3'
 gem 'devise'
 gem 'google-apis-gmail_v1'
+gem 'google-apis-oauth2_v2'
 gem 'kaminari'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'

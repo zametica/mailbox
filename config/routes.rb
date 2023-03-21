@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :mails, only: :index
+    resource :auth, controller: 'auth', only: :show
   end
   resources :mails, only: :index
 

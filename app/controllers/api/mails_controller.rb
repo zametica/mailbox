@@ -15,7 +15,7 @@ module Api
 
     def messages
       @messages ||=
-        Message.where(user: current_user)
+        Message.where(user:)
                .search(search_params)
                .order(sent_at: :desc)
                .page(search_params[:page] || 1)

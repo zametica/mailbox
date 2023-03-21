@@ -1,57 +1,47 @@
 module Users
   class ImportEmailsService
-    def self.call(user_id:)
-      new(user_id).call
+    def self.call(access_token:)
+      new(access_token).call
     end
 
-    def initialize(user_id)
-      @user_id = user_id
+    def initialize(access_token)
+      @access_token = access_token
     end
 
     def call
       find_user
-
-      # to break the sync it would be better to track
-      # the activity on mails endpoint
-      # rather than reschedule the worker
-      return if user.access_token.blank?
-
       import_emails
       reschedule_worker
     end
 
     private
 
-    attr_reader :user_id, :user
+    attr_reader :access_token, :user
 
     def find_user
-      @user = User.find(user_id)
+      @user = User.find_by!(email:)
     rescue ActiveRecord::RecordNotFound
       raise UnrecoverableError, 'User not found'
     end
 
-    def import_emails
-      return partial_import if last_history_id.present?
+    def email
+      @email ||= Gmail::VerifyTokenService.call(access_token:)&.email
+    rescue Google::Apis::Error
+      raise UnrecoverableError, 'Unauthorized'
+    end
 
-      full_import
-    rescue Signet::AuthorizationError
-      raise UnrecoverableError, 'Authorization failed'
+    def import_emails
+      import_service.call(user:, access_token:)
+    end
+
+    def import_service
+      return PartialSyncEmailService if user.last_history_id.present?
+
+      FullSyncEmailService
     end
 
     def reschedule_worker
-      SyncEmailsWorker.perform_in(1.minute, user_id)
-    end
-
-    def full_import
-      FullSyncEmailService.call(user:)
-    end
-
-    def partial_import
-      PartialSyncEmailService.call(user:, history_id: last_history_id)
-    end
-
-    def last_history_id
-      @last_history_id ||= user.messages.order(history_id: :desc).pick(:history_id)
+      SyncEmailsWorker.perform_in(1.minute, access_token)
     end
   end
 end
