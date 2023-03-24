@@ -31,13 +31,9 @@ module Users
     end
 
     def import_emails
-      import_service.call(user:, access_token:)
-    end
-
-    def import_service
-      return PartialSyncEmailService if user.last_history_id.present?
-
-      FullSyncEmailService
+      SyncEmailService.call(user:, access_token:)
+    rescue
+      byebug
     end
 
     def reschedule_worker

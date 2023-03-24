@@ -10,11 +10,26 @@ module Users
     end
 
     def call
-      raise NotImplementedError
+      sync_service.call do |result, _error|
+        user.add_message(result)
+      end
     end
 
     private
 
     attr_reader :user, :access_token
+
+    def sync_service
+      if user.last_history_id.present?
+        return Gmail::FetchHistoryService.new(
+          access_token:,
+          options: {
+            history_id: user.last_history_id
+          }
+        )
+      end
+
+      Gmail::FetchMessagesService.new(access_token:)
+    end
   end
 end
